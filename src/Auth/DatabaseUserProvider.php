@@ -185,4 +185,9 @@ class DatabaseUserProvider extends UserProvider
     {
         return Config::get('ldap_auth.login_fallback', false);
     }
+
+    public function rehashPasswordIfRequired(Authenticatable $user, #[\SensitiveParameter] array $credentials, bool $force = false)
+    {
+        return;
+    }
 }
